@@ -31,7 +31,7 @@ class SearchProcessor extends modProcessor
         ]);
         if (!empty($query)) {
             $c->where([
-                'pagetitle:LIKE' => '%' . $query . '%'
+                'pagetitle:LIKE' => '%' . preg_replace('/\s+/', '%', $query) . '%'
             ]);
         }
         if (!empty($id)) {
