@@ -1,5 +1,9 @@
 @import "choices.js/public/assets/styles/choices.css";
 
+.tox.tox-tinymce {
+    max-height: 90vh;
+}
+
 .tox .tox-checkbox__label {
     font-size: 14px;
 }

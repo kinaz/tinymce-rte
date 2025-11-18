@@ -144,7 +144,8 @@ class OnRichTextEditorInit extends Plugin
             'min_height' => (int)$this->tinymcerte->getOption('min_height', [], 100),
             'branding' => $this->tinymcerte->getOption('branding', [], false) == 1,
             'cache_suffix' => '?v=' . $this->tinymcerte->version,
-            'promotion' => false
+            'promotion' => false,
+            'content_style' => 'html {overflow-y: auto}'
         ], $this->getSettings(), $this->getProperties());
         if (!$config['width']) {
             unset($config['width']);
