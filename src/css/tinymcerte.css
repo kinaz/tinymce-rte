@@ -1,6 +1,6 @@
 @import "choices.js/public/assets/styles/choices.css";
 
-.tox.tox-tinymce {
+.tox.tox-tinymce:not(.tox-fullscreen) {
     max-height: 90vh;
 }
 
