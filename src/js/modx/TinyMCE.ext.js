@@ -44,6 +44,18 @@ Ext.extend(TinyMCERTE.Tiny, Ext.Component, {
             if (that.allowDrop) {
                 that.registerDrop();
             }
+            editor.on('FullscreenStateChanged', function (e) {
+                var mc = Ext.getCmp('modx-content'),
+                    mrml = Ext.getCmp('modx-resource-main-left');
+                if (e.state) {
+                    mc.el.dom.style.zIndex = 100;
+                    mrml.el.dom.style.zIndex = 100;
+                } else {
+                    mc.el.dom.style.zIndex = null;
+                    mrml.el.dom.style.zIndex = null;
+                }
+
+            });
         };
         tinymce.init(this.cfg);
     },
